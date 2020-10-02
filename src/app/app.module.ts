@@ -10,12 +10,12 @@ import { ProductDescriptionComponent } from "./product-description/product-descr
 import { ProductService } from "./product.service";
 import { ProductTracklistingComponent } from "./product-tracklisting/product-tracklisting.component";
 import { ProductListComponent } from "./product-list/product-list.component";
-import { Routes } from "@angular/router";
-import { RouterModule } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
 
-@appRoutes({
-  Routes: [],
-})
+const appRoutes: Routes = [
+  { path: 'products', component: ProductListComponent },
+  { path: 'Product/:id', component: ProductPageComponent}
+];
 
 
 @NgModule({
